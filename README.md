@@ -38,7 +38,7 @@ make.bat
 After successfully compiling you should be all set. Try executing a sample program like so:
 
 ```batch
-bin/Debug/BOXES.exe samples/hello_world.box
+bin/Debug/BOXES.exe samples/hello.box
 ```
 
 ### macOS/Linux
@@ -52,7 +52,7 @@ This requires `clang++` to be installed. Run the build script:
 After successfully compiling you should be all set. Try executing a sample program like so:
 
 ```shell
-bin/Debug/boxes samples/hello_world.box
+bin/Debug/boxes samples/hello.box
 ```
 
 ## Samples
