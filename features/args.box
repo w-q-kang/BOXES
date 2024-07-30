@@ -1,0 +1,5 @@
+// reads and prints program arguments
+box args triple string
+on start set var1 $arguments | print arguments var1 \n | set var2 0 | send loop off
+on loop incr var2 | cond.int var2 <= var1 | if | set var3 argument & var2 | print $!var3 \n | repeat off
+end

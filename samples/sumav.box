@@ -1,0 +1,5 @@
+// calculate sum and average of a list of numbers
+box master array string
+on start append vec 1 5 78 496 7 9 34 7 9 54 | set idx 0 | set.float var1 0.0 | send loop off
+on loop incr idx |  cond.int idx <= len | set.float.ifnot var2 var1 / len | print.nl.ifnot var1 var2 | if | set.float var1 var1 + vecx | repeat off
+end

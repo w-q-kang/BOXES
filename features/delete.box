@@ -1,0 +1,16 @@
+// demo for 'delete' action
+box first array string
+on start append vec 1 2 3 4 5 6 7 8 9 | set idx 5 | delete vec | print vec \n off
+end
+box second array string
+on start append vec 1 2 3 4 5 6 7 8 9 | set idx 2 | impose 3 | delete vec | print vec \n off
+end
+box secondb array int
+on start append vec 1 2 3 4 5 6 7 8 9 | set idx 1 | impose 3 | delete vec | print vec \n off
+end
+box secondc array int+
+on start append vec 1 2 3 4 5 6 7 8 9 | set idx 3 | impose 3 | delete vec | print vec \n off
+end
+box third array string
+on start append vec 1 2 3 4 5 6 7 8 9 | set idy 2 | impose 3 | delete.row vec | print vec \n off
+end

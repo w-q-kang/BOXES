@@ -1,0 +1,4 @@
+// simple math
+box master scalar int
+on start set var 5 - -7 + abs -9 | print var \n off
+end

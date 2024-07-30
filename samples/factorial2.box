@@ -1,0 +1,7 @@
+// input an integer and output its factorial - using a triple box
+box master triple int
+on start input var1 | set var2 1 | set var3 var1 | send goon off
+on goon set var2 var2 * var3 | send next off
+on printr print var2 \n off
+on next set var3 var3 - 1 | cond var3 | send.ifnot printr | if | send goon off
+end

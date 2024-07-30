@@ -1,0 +1,8 @@
+one eins
+two eins zwei drei
+three eins zwei drei vier fuenf
+four eins zwei drei vier fuenf
+five eins zwei drei vier 5
+six eins zwei drei 4 fuenf
+seven eins zwei 3 vier fuenf
+eight eins 2 drei vier fuenf

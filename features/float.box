@@ -1,0 +1,4 @@
+// test prog for float 
+box master scalar float 
+on start set var 0.5 * ( 7.0 + sqrt ( 7.0 * 7.0 - 4 * 9.0 )  )  | print var \n off
+end

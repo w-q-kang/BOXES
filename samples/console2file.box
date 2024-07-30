@@ -1,0 +1,4 @@
+// read input from console and write to file
+box master scalar string
+on start input var | write c2f.txt var off
+end

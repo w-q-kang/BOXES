@@ -1,0 +1,14 @@
+// this program mimicks the recursive solution for the 'tower of hanoi'
+box master queue array string
+// var1=n, var2=a,var3=b,var4=c
+on start input var1 | append vec r var1 a b c | qadd vec | set idx 1 | send loop off
+on loop cond.int idx <= qlen | if | qget vec idx | cond @1 == m | do.if next | ifnot | 
+cond @2 == 1 | do.if one | ifnot | do else off
+on one set var2 @3 | set var4 @5 | clear vec | append vec m var2 var4 | qset vec idx | incr idx | send loop  off
+on next incr idx | cond.int idx <= qlen | if | send loop  off
+on else set var1 @2 | set var2 @3 | set var3 @4 | set var4 @5 | clear vec | append vec m var2 var4 | qset vec idx |
+clear vec | decr var1 | append vec r var1  var2 var4 var3 | qins vec idx | 
+clear vec | append vec r var1 var3 var2 var4 | set.int var5 idx + 2 | qins vec  var5 | send loop  off
+on final set idx 1 | send floop off
+on floop qget vec idx | print.nl @2 -> @3 | incr idx | cond.int idx <= qlen | if | repeat off
+end

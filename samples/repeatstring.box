@@ -1,0 +1,5 @@
+// string * n: input string - n
+box master quintuple string
+on start input var1 | input var2 | cond.int var2 >= 1 | if | set var3 var1 | do loop off
+on loop cond.int var2 > 1 | print.ifnot var3 | if | set var3 var3 & var1  | decr var2 | repeat off
+end

@@ -1,0 +1,4 @@
+// demo for 'minus' action
+box test array string
+on start append vec a b c d e f g g | minus vec a c e g | print.nl vec off
+end

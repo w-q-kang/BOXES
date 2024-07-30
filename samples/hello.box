@@ -1,0 +1,3 @@
+box mybox scalar string 
+on start print "hello world\n" off
+end

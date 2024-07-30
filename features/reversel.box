@@ -1,0 +1,4 @@
+// demo for 'reverse' action
+box master array string
+on start append vec a b c d e f g | reverse vec | print.nl vec off
+end

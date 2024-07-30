@@ -1,0 +1,8 @@
+// read a file into a vector and output the contents to the console
+box mybox array string
+on start read test.txt | print len \n | set idx 1 | send out off
+on out print vecx \n | set idx idx + 1 | cond.int idx <= len | send.ifnot next | if | repeat off 
+on next set idx 1 | send next2 off
+on next2 tl vecx a @- b @- c @- d @- e @- | print vecx \n |  set idx idx + 1 | cond.int idx <= len | if | repeat off 
+end
+ 

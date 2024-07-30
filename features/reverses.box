@@ -1,0 +1,4 @@
+// demo for 'rv' action
+box master scalar string
+on start input var | rv var | print.nl var off
+end

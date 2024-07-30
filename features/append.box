@@ -1,0 +1,4 @@
+// append unique
+box test array string
+on start append.new vec a b c f d e r f s s g g | print.nl vec off
+end

@@ -1,0 +1,14 @@
+// the famous 99 bottles of beer program
+box mybox scalar int 
+on start set var 99 |  send goon off
+on goon print var "bottles of beer on the wall," var "bottles of beer.\n" | 
+cond var > 2 | set var var - 1 | branch finalround |
+print "Take one down and pass it around," var "bottles of beer on the wall." \n | send goon off
+on finalround print 
+"Take one down and pass it around, 1 bottle of beer on the wall.\n" 
+"1 bottle of beer on the wall, 1 bottle of beer.\n" 
+"Take one down and pass it around, no more bottles of beer on the wall.\n" 
+"No more bottles of beer on the wall, no more bottles of beer.\n"
+"Go to the store and buy some more, 99 bottles of beer on the wall.\n"
+off
+end

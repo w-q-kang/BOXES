@@ -1,0 +1,13 @@
+// convert decimal to binary
+box master scalar int
+on start input var | send initial var off
+end
+box decimal scalar int
+on initial set var #1 | send next off
+on next cond var | send.ifnot prt | if | cond var % 2 | send.if add1 | send.ifnot add0 | finis | set var ( var - ( var % 2 ) ) / 2 off
+end
+box binary scalar string 
+on add0 set var 0 & var | send next off
+on add1 set var 1 & var | send next off
+on prt print var \n off
+end

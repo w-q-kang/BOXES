@@ -1,0 +1,8 @@
+// input number and print pascal's triangle
+box master queue array int
+on start input var1 | set idx 0 | append vec 1 | print.nl vec | send loop off
+on loop  incr idx | cond.int idx == 1 | do.if same | cond.int   idx > 1 | do.if replace | finis | cond.int idx == len | do.if next | cond.int var1 > 0 | if | repeat off
+on same append vec2 vecx off
+on replace set.int var2 idx - 1 | set var3 @!var2 | set.int var4 vecx + var3 | append vec2 var4 off
+on next append.if vec2 1 | clear vec | append vec vec2 | clear vec2 | print.nl vec | decr var1 | set idx 0 off
+end

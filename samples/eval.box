@@ -1,0 +1,10 @@
+// evaluates the input as an expression, input must not contain spaces
+box master scalar string
+on start input var | send init var off
+end
+box prep array string
+on init partition.0.keep vec #1 < > & + - * / % ^ <= >= <> == ( ) or and not | send eval vec off
+end
+box eval scalar int
+on eval set var #* | print var \n off
+end

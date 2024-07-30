@@ -1,0 +1,13 @@
+// demo for 'map' action
+box map array int
+on start append vec 1 2 3 4 5 6 7 8 9 10 | send next off
+on next map vec @curr * @curr | print vec \n off
+end
+box map2 array int
+on start append vec 1 2 3 4 5 6 7 8 9 10 | send next2 off
+on next2 map vec @curr + @succ | print vec \n off
+end
+box map3 array int
+on start append vec 1 2 3 4 5 6 7 8 9 10 | send next3 off
+on next3 map vec @prev + @curr + @succ | print vec \n off
+end

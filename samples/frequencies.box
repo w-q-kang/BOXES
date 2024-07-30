@@ -1,0 +1,8 @@
+// read the input line and do a frequency analysis of the words
+box master queue array string
+// var1 = input, var4 = index to original array (vec2), var2 = index of freq list
+on start input.line var1 | partition.0.reverse vec2 var1 @space | set var4 1 | send loop off
+on loop find var2 vec vec2@!var4 | cond var2 == 0 | do.if new | do.ifnot old | finis | incr var4 | cond.int var4 <= len2 | print.ifnot vec | if | repeat off
+on new append vec vec2@!var4 1 off
+on old incr var2 | find.idx var3 vec var2 | incr var3 | set idx var2 | set vecx var3 off
+end

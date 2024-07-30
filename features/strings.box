@@ -1,0 +1,28 @@
+// demo for string operators
+box master scalar string
+on start set var size 899144914 | print var \n |
+set var upper 8roiuwer | print var \n |
+set var lower EWROVV9K | print var \n |
+set var first potrwetr | print var \n |
+set var last potrwetr | print var \n |
+set var lower first EWROVV9K | print var \n |
+set var last upper potrwetr | print var \n |
+set var oipwrowwgwp head 5 | print var \n |
+set var oipwrowwgwp tail 4 | print var \n |
+set var first ( oipwrowwgwp tail 4 ) | print var \n |
+print ===== sfind ===== \n | 
+set var ioprtpwqrt sfind p | print var \n |
+set var ioprtpwqrt sfind q | print var \n |
+print ===== trim ===== \n | 
+set var oiweptp trim p  | print var \n |
+set var oiweptp trim o  | print var \n |
+set var oiweptp trim i  | print var \n |
+print ===== matchl ===== \n | 
+set var 321 matchl  | print var \n |
+set var 321 matchl 3 | print var \n |
+set var 321 matchl 32 | print var \n |
+set var 321 matchl 321 | print var \n |
+print ===== headeq ===== \n | 
+set var ( 321 headeq 32 ) and ( 321 headge ( 32 & 1 ) ) | print var \n  
+off
+end

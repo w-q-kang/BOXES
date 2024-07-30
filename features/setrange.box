@@ -1,0 +1,12 @@
+// demo for 'setrange' action
+box master array string 
+on start setrange vec 1,4000 <= 2000 : >= 500 | print.nl vec |
+setrange vec 1,2000 == 200 | print.nl vec |
+setrange vec 1,2000 <> 200 | print.nl vec |
+setrange vec 1,4000 <= 2000 : >= 500 :: 1,4000 == 250 :: 1,4000 <> 300 | print.nl vec |
+print.nl size | setrange vec size 1,5000 | print.nl vec |
+setrange vec 1,2000 & 5000,10000 | print.nl vec |
+setrange vec 1,200 - 5,55 | print.nl vec 
+off
+end
+ 

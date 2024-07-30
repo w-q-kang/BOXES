@@ -1,0 +1,27 @@
+// convert decimal to hex
+box master scalar int
+on start input var | send initial var off
+end
+box decimal triple int
+on initial set var1 #1 | send next off
+on next cond var1 | send.ifnot prt | if | set var2 var1 % 16 | send var2 | set var1 ( var1 -  var2 ) / 16 off
+end
+box hexadecimal scalar string 
+on 0 set var 0 & var | send next off
+on 1 set var 1 & var | send next off
+on 2 set var 2 & var | send next off
+on 3 set var 3 & var | send next off
+on 4 set var 4 & var | send next off
+on 5 set var 5 & var | send next off
+on 6 set var 6 & var | send next off
+on 7 set var 7 & var | send next off
+on 8 set var 8 & var | send next off
+on 9 set var 9 & var | send next off
+on 10 set var A & var | send next off
+on 11 set var B & var | send next off
+on 12 set var C & var | send next off
+on 13 set var D & var | send next off
+on 14 set var E & var | send next off
+on 15 set var F & var | send next off
+on prt print var \n off
+end

@@ -1,0 +1,7 @@
+// demo for 'compact' action
+box master array string
+on start append vec a b c d e f g h i | compact var vec , ; | print var \n | compact var vec | print var \n off
+end
+box second array string
+on start append vec a b c d e f g h i | impose 3 | set idy 2 | compact.row var vec , ; | print var \n | set idx 3  | compact.col var vec . | print var \n off
+end

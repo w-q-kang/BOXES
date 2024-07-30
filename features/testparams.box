@@ -1,0 +1,10 @@
+// read a string, partition it and print it - test parameters
+box master scalar string
+on start input var | send init var off
+end
+box mybox array string
+on init partition.0.reverse vec #1 , | send out vec off
+end
+box out scalar string
+on out print #* \n off
+end

@@ -1,0 +1,10 @@
+// read a number and determine whether it's a prime
+box master scalar int
+on start input var | send initial var off
+end
+box test triple int
+on initial set var1 #1 | set var2 3 | cond var1 <= 2 | send.if prime | ifnot | cond var1 % 2 | send.ifnot divby 2 | if | send next off
+on next cond var2 >= var1 | send.if prime | ifnot | cond var1 % var2 | send.ifnot divby var2 | if | set var2 var2 + 2 | send next off
+on divby print divisible by #1 off
+on prime print prime off
+end

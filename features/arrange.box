@@ -1,0 +1,35 @@
+// demo for 'arrange' action
+box master1 array string
+on start file.delete arrange1.txt | finis | append 1 2 3 4 5 6 7 8 9 | impose 3 | arrange grid to rows |
+write arrange1.txt vec | send two off
+end
+box master2 array string
+on two file.delete arrange2.txt | finis | append 1 2 3 4 5 6 7 8 9 | impose 3 | arrange grid to cols |
+write arrange2.txt vec | send three off
+end
+box master3 array string
+on three file.delete arrange3.txt | finis | append abc def ghi | arrange rows to grid |
+write arrange3.txt vec | send four off
+end
+box master4 array string
+on four file.delete arrange4.txt | finis | append abc def ghi | arrange cols to grid |
+write arrange4.txt vec | send five off
+end
+box master5 array string
+on five file.delete arrange5.txt | finis | append abc def ghi | arrange rows to cols |
+write arrange5.txt vec | send six off
+end
+box master6 array string
+on six file.delete arrange6.txt | finis | append abc def ghi | arrange cols to rows |
+write arrange6.txt vec | send seven off
+end
+// transpose
+box master7 array string
+on seven file.delete arrange7.txt | finis | append a b c d e f g h i | impose 3 | arrange grid to rows |  arrange cols to grid |
+write arrange7.txt vec | send eight off
+end
+// rotate 90
+box master8 array string
+on eight file.delete arrange8.txt | finis | append a b c d e f g h i | impose 3 | arrange grid to rows |  reverse vec | arrange cols to grid |
+write arrange8.txt vec off
+end

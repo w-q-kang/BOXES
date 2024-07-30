@@ -1,0 +1,7 @@
+// output quadratic function values
+box master triple string
+on start  set var1 0 | send loop off
+on loop incr var1 | cond.int var1 <= 10 | if | input var2 | 
+set.float var3 5.5 * var2 * var2 + 2.0 * var2 + 1.37 |
+print.nl var2 var3 | repeat off
+end

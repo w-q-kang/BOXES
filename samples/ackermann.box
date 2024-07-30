@@ -1,0 +1,25 @@
+// the famous ackermann function, this implementation mimicks recursion
+// a(0,m) = m+1
+//a(n,0) = a(n-1,1)
+//a(n,m) =a(n-1,a(n,m-1)) 
+box master queue array string
+// each array consists of: n m ref flag
+// flag = -1:to be eval. -2:waiting for result, 0 =contains result as n
+on start input var1 | input var2 | append vec var1 var2 0 -1 | qadd vec | send calc off
+on calc qget vec qlen | 
+// print.nl calc ( qlen ) vec | 
+set var4 @4 | cond var4 == 0 | do.if down | repeat.if | 
+finis | cond var4 == -1 | do.if eval | repeat.if | finis | cond var4 == -2 | do.if case4 | finis | repeat off
+// if flag == 0 => result
+on down set var1 @1 | set var3 @3 | qdel qlen | cond.int var3 > 0 | do.ifnot finish | 
+if | qget vec var3 | set.int @2 var1 | set.int @4 -1 | qset vec var3 off
+on finish print.nl result is var1 | stop off
+// if flag == -1 => eval
+on eval cond @1 == 0 | do.if case1 | ifnot | cond @2 == 0 | do.if case2 | do.ifnot case3 | finis off
+on case1 set.int @1 @2 + 1 | set.int @4 0 | qset vec qlen off
+on case2 set.int @1 @1 - 1 | set.int @2 1 |  qset vec qlen off
+on case3 set var1 @1 | set var2 @2 | set.int @1 @1 - 1 | set.int @2 0 | set.int @4 -2 |
+qset vec qlen | clear vec | decr var2 | append vec var1 var2 qlen -1 | qadd vec off
+// if flag == -2 => should not occur
+on case4 print.nl wrong entry found at qlen vector is vec | stop off
+end

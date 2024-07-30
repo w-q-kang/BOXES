@@ -1,0 +1,12 @@
+// read a string, partition it and sort it
+box master scalar string
+on start input var | send initial var off
+end
+box mybox array string
+on initial set idx 1 | partition.1.keep vec #1 | sort vec | send out1 off
+on out1 cond idx <= len | if | print vecx \n | set idx idx + 1 | repeat off 
+end
+box mybox array string
+on initial set idx 1 | partition.1.keep vec #1 | sort.desc vec | send out2 off
+on out2 cond idx <= len | if | print vecx \n | set idx idx + 1 | repeat off 
+end

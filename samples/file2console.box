@@ -1,0 +1,4 @@
+// read a line from a file and output it to the console
+box master scalar string
+on start readline c2f.txt var | finis | print.nl var off
+end

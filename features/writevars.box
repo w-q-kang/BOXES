@@ -1,0 +1,23 @@
+// demo for 'writevars' action
+box one scalar string
+on start set var eins | write.vars writevars.txt off
+end
+box two triple string
+on start set var eins | set var2 zwei | set var3 drei | write.vars writevars.txt off
+end
+box three quintuple string
+on start set var eins | set var2 zwei | set var3 drei | set var4 vier | set var5 fuenf | write.vars writevars.txt off
+end
+box four array string
+on start set var eins | set var2 zwei | set var3 drei | set var4 vier | set var5 fuenf | write.vars writevars.txt off
+end
+box five machine field string
+on start set var eins | set var2 zwei | set var3 drei | set var4 vier | set var5 5 | write.vars writevars.txt off
+end
+box six machine net string
+on start set var eins | set var2 zwei | set var3 drei | set var4 4 | set var5 fuenf | write.vars writevars.txt off
+end
+box seven queue array string
+on start set var eins | set var2 2 | set var3 drei | set var4 vier | set var5 fuenf | write.vars writevars.txt off
+end
+

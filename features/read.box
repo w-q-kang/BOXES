@@ -1,0 +1,4 @@
+// demo for 'readline' action
+box master scalar string
+on start readline test.txt var | if | print var \n | send start off
+end

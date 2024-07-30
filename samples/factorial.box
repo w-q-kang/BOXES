@@ -1,0 +1,13 @@
+// input an integer and output its factorial - using 3 scalar boxes
+box master scalar int
+on start input var | send initial var off
+end
+box first scalar int
+on initial set var 1 off
+on goon set var var * #1 | send next off
+on printr print var \n off
+end
+box second scalar int
+on initial set var #1 | send goon var off
+on next set var var - 1 | cond var | send.ifnot printr | if | send goon var off
+end

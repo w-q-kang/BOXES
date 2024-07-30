@@ -1,0 +1,5 @@
+// making a list unique
+box master queue array string
+on start append vec a k l e f d u r d p w e r  | set idx 0 | send loop off
+on loop incr idx | cond.int idx <= len | print.ifnot vec2 | if | find var1 vec2 vecx | cond.int var1 == 0 | append.if vec2 vecx | finis | repeat off
+end

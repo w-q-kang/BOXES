@@ -1,0 +1,8 @@
+// substring: input string - start - length
+box master quintuple string
+on start input var1 | input var2 | input var3 |
+cond.int var2 <= 1 | do.if left | ifnot | do mid off
+on left set var1 var1 head var3 | print.nl var1 off
+on mid set var4 size var1 | cond.int var2 <= var4 | if | set.int var2 var4 + 1 - var2 |  set var1 var1 tail var2 |
+set var1 var1 head var3 | print.nl var1 off
+end

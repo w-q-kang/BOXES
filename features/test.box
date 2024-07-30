@@ -1,0 +1,5 @@
+// endless loop
+box mybox scalar string 
+on start print first\n | send more off
+on more print more\n | send more off
+end

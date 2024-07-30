@@ -1,0 +1,8 @@
+// demo for 'tl' action
+box master scalar string
+on start input var | send initial var | send trans var off
+end
+box test scalar string 
+on initial set var #1 off
+on trans tl var a @- | print var \n off
+end

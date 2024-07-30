@@ -1,0 +1,9 @@
+// demo for 'matchl' operator
+box master scalar string
+on start 
+set var 321 matchl  | print var \n |
+set var 321 matchl 3 | print var \n |
+set var 321 matchl 32 | print var \n |
+set var 321 matchl 321 | print var \n 
+off
+end

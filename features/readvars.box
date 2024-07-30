@@ -1,0 +1,23 @@
+// demo for 'readvars' action
+box one scalar string
+on start readvars writevars.txt | print.nl var off
+end
+box two triple string
+on start readvars writevars.txt | print.nl var var2 var3 off
+end
+box three quintuple string
+on start readvars writevars.txt | print.nl var var2 var3 var4 var5 off
+end
+box four array string
+on start readvars writevars.txt | print.nl var var2 var3 var4 var5 off
+end
+box five machine field string
+on start readvars writevars.txt | print.nl var var2 var3 var4 var5 off
+end
+box six machine net string
+on start readvars writevars.txt | print.nl var var2 var3 var4 var5 off
+end
+box seven queue array string
+on start readvars writevars.txt | print.nl var var2 var3 var4 var5 off
+end
+

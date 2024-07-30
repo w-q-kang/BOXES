@@ -1,0 +1,16 @@
+// read a string and partition it
+box master scalar string
+on start input var | send initial var off
+end
+box mybox array string
+on initial set idx 1 | partition vec #1 a b c | send out off
+on out cond.int idx <= len | if | print vecx \n | set idx idx + 1 | repeat off 
+end
+box mybox array string
+on initial set idx 1 | partition.1.keep vec #1 | send out1 off
+on out1 cond.int idx <= len | if | print vecx \n | set idx idx + 1 | repeat off 
+end
+box mybox array string
+on initial set idx 1 | partition.0.reverse vec #1 , | send out1 off
+on out1 cond.int idx <= len | if | print vecx \n | set idx idx + 1 | repeat off 
+end

@@ -1,0 +1,10 @@
+// the esoteric fizzbuzz challenge
+box fizzbuzz triple string
+on start input var1 | set var2 0 | do loop off
+on loop incr var2 | cond.int var2 <= var1 | if |
+cond.int  var2 % 15 == 0 | print.if FizzBuzz @space | repeat.if | ifnot |
+cond.int  var2 % 5 == 0 | print.if Buzz @space | repeat.if | ifnot |
+cond.int  var2 % 3 == 0 | print.if Fizz @space | repeat.if | ifnot |
+print var2 @space | repeat
+off
+end

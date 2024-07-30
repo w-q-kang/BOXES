@@ -1,0 +1,13 @@
+// input a number and output the corresponding fibonacci sequence
+box master scalar int
+on start input var | send initial var off
+end
+box fibo1 scalar int
+on initial set var #1  - 2 | cond var <= 0 | send.ifnot proceed1 var | if | print 1 \n off 
+on proceed2 set var var - 1 | send proceed1 var off
+end
+box fibo1 triple int
+on initial set var1 1 | set var2 1 | set var3 0 off
+on proceed1 cond #1 > 0 | send.ifnot prt | if | set var3 var2 + var1 | set var1 var2 | set var2 var3 | send proceed2 off
+on prt print var2 \n off 
+end

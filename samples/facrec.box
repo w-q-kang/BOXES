@@ -1,0 +1,8 @@
+// mimicking a recursive function by using queue as a stack
+box master queue array string
+// var1 = input, var2 = stack pointer, var3 = next val, var4 = result
+on start input var1 | append vec var1 | qadd vec | set idx 1 | set var2 1 | set var4 1 | send calc off
+on calc qget vec var2 | cond vecx <= 1 | send.if down | ifnot | set.int var3 vecx - 1 | clear vec | append vec var3 | qadd vec | incr var2 | repeat off
+on down qget vec var2 | qdel var2 | set.int var4 var4 * vecx | decr var2 | cond.int var2 >= 1 | do.ifnot result | if | repeat off
+on result print.nl result is var4 off
+end

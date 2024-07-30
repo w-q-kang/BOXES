@@ -1,0 +1,4 @@
+// demo for 'write' action
+box master scalar string
+on start set var "hello world!" | write out.txt var off
+end

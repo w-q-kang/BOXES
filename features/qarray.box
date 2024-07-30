@@ -1,0 +1,10 @@
+// test of queue array
+box master queue array string
+on start append vec a b c d e | qadd vec | qget vec2 1 | print.nl vec | print.nl qlen | print.nl vec2 |
+qdel 1 | print.nl qlen | print.nl after del vec2 | qdel 1 | qins vec @new | print.nl qlen | qins vec2 10 | 
+print.nl qlen | append vec  f | print.nl now vec | qset vec 1 | qget vec3 1 | print.nl vec3 off
+end
+box second queue array string
+on start append vec a b c d e | print.nl first is vec | copy vec2 vec | print.nl second is vec2 
+| append vec f g | swap vec vec3 | print.nl vec3 off
+end

@@ -1,0 +1,7 @@
+// demo for 'sr' action
+box master scalar string
+on start sr var poqwervq | print var \n |
+sr var OO..OO.O..O.O..O | print var \n |
+sr.desc var OO..OO.O..O.O..O | print var \n 
+off
+end

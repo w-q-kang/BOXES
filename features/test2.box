@@ -1,0 +1,5 @@
+// add two numbers
+box master scalar int
+on start send bla 4194451945 100515351 off
+on bla set var #1 + #2 - 1 | print var \n off
+end

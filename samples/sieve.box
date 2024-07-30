@@ -1,0 +1,7 @@
+// sieve of eratosthenes
+box master array string
+on start input var1 | set var2 2 | do loop1 off
+on loop1 append vec var2 | incr var2 | cond.int var2 <= var1 | send.ifnot sieve | if | repeat off
+on sieve set var3 @1 | print.nl var3  | delete.at vec 1 | cond.int len > 0 | if | set.int var4 var3 + var3 | do reduce | send sieve off
+on reduce find var5 vec var4 | cond var5 <> 0 | delete.at.if vec var5 | set.int var4 var4 + var3 | cond.int var4 <= var1 | if | repeat off
+end
