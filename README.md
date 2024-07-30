@@ -5,15 +5,15 @@ BOXES is a mildly esoteric/weird programming language. It is of course not inten
 The main idea of Boxes is that a program consists of a set of small, independent units that communicate with each other via messages. I call these units ‘boxes‘.
 
 So a program basically consists of a number of boxes, where each box has:
-    * a name
-    * a type specification
-    * one or more message responses
-    * a variable or a set of variables (depending on its type specification)
+- a name
+- a type specification
+- one or more message responses
+- a variable or a set of variables (depending on its type specification)
 
 send:
-    * a send call specifies a tag followed by a parameter list (which may be empty)
-    * if a tag is sent, each box that specifies a message response for that tag executes the message actions associated with the tag
-    * if the send call specifies too many params, excess params are simply ignored
+- a send call specifies a tag followed by a parameter list (which may be empty)
+- if a tag is sent, each box that specifies a message response for that tag executes the message actions associated with the tag
+- if the send call specifies too many params, excess params are simply ignored
 
 program execution is governed by a message queue.
 In the beginning the message queue only contains the send call ‘start’ and sends it. Sending it may cause boxes to send other tags + params where each tag + params is regarded as one entry in the queue.
