@@ -40,3 +40,6 @@ obj/
 *.depend
 *.layout
 *.cscope_file_list
+
+# Other
+*.txt
